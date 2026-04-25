@@ -27,13 +27,12 @@
     background: #000;
 }
 
-.aden-bg {
+.hero-video {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: #000 url('https://cdn.wallpapersafari.com/83/87/1O2XmU.jpg') no-repeat center center;
-    background-size: cover;
-    filter: brightness(0.4) sepia(0.3) hue-rotate(-30deg);
-    animation: zoom-slow 30s infinite alternate linear;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.5) contrast(1.2);
 }
 
 @keyframes zoom-slow {
