@@ -1,0 +1,72 @@
+/* Animación de Vibración (Shake) */
+@keyframes screen-shake {
+    0% { transform: translate(0,0); }
+    10% { transform: translate(-5px,-5px); }
+    20% { transform: translate(5px,5px); }
+    30% { transform: translate(-5px,5px); }
+    40% { transform: translate(5px,-5px); }
+    50% { transform: translate(-2px,2px); }
+    100% { transform: translate(0,0); }
+}
+
+/* Animación de Destello (Flash) */
+@keyframes flash-impact {
+    0% { opacity: 0; }
+    10% { opacity: 1; background: white; }
+    100% { opacity: 0; }
+}
+
+/* Fondo de Aden Dinámico */
+#hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.aden-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: #000 url('https://cdn.wallpapersafari.com/83/87/1O2XmU.jpg') no-repeat center center;
+    background-size: cover;
+    filter: brightness(0.4) sepia(0.3) hue-rotate(-30deg);
+    animation: zoom-slow 30s infinite alternate linear;
+}
+
+@keyframes zoom-slow {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+.impact-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 5;
+    pointer-events: none;
+    animation: flash-impact 1.5s forwards;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    animation: screen-shake 0.5s 0.2s; /* Empieza justo después del flash */
+}
+
+.epic-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.8), 0 0 40px rgba(0, 212, 255, 0.4);
+    opacity: 0;
+    transform: scale(0.5);
+    animation: logo-reveal 2s 0.5s forwards cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+@keyframes logo-reveal {
+    to { opacity: 1; transform: scale(1); }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "l2hardcore-web",
+  "version": "1.0.0",
+  "description": "L2 Hardcore Premium Landing Page",
+  "main": "index.html",
+  "scripts": {
+    "build": "mkdir -p dist && cp -r index.html style.css main.js assets dist/",
+    "win-build": "if not exist dist mkdir dist && xcopy /E /Y index.html dist\\ && xcopy /E /Y style.css dist\\ && xcopy /E /Y main.js dist\\ && xcopy /E /Y assets dist\\assets\\"
+  },
+  "author": "Antigravity",
+  "license": "MIT"
+}
