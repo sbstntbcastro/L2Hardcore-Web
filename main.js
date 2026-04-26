@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
     fetchNews();
     startCountdown();
     
@@ -55,7 +55,7 @@ function startCountdown() {
         const diff = targetDate - now;
         
         if (diff <= 0) {
-            document.querySelector('.countdown-title').innerHTML = '�ESTAMOS ONLINE!';
+            document.querySelector('.countdown-title').innerHTML = '¡ESTAMOS ONLINE!';
             document.getElementById('timer').style.display = 'none';
             return;
         }
@@ -74,3 +74,37 @@ function startCountdown() {
     setInterval(update, 1000);
     update();
 }
+
+async function fetchRanking() {
+    try {
+        const response = await fetch('ranking.json');
+        const ranking = await response.json();
+        const body = document.getElementById('ranking-body');
+        
+        body.innerHTML = '';
+        
+        ranking.forEach((player, index) => {
+            const row = document.createElement('tr');
+            
+            let posClass = '';
+            let posIcon = index + 1;
+            if (index === 0) { posClass = 'gold'; posIcon = '<i class="fas fa-crown"></i> 1'; }
+            else if (index === 1) { posClass = 'silver'; posIcon = '<i class="fas fa-medal"></i> 2'; }
+            else if (index === 2) { posClass = 'bronze'; posIcon = '<i class="fas fa-medal"></i> 3'; }
+            
+            const status = player.online === '1' ? '<span class="status-on">ONLINE</span>' : '<span class="status-off">OFFLINE</span>';
+            
+            row.innerHTML = 
+                <td class=""></td>
+                <td class="char-name"></td>
+                <td class="kills"></td>
+                <td class="kills"></td>
+                <td></td>
+            ;
+            body.appendChild(row);
+        });
+    } catch (error) {
+        console.error('Error cargando ranking:', error);
+    }
+}
+

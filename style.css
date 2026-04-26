@@ -608,3 +608,69 @@ footer {
     .time-block { min-width: 60px; }
     .countdown-title { font-size: 1.8rem; }
 }
+
+/* Ranking Styles */
+#ranking {
+    padding: 80px 0;
+    background: #050505;
+}
+
+.ranking-box {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.ranking-table th {
+    background: rgba(255, 69, 0, 0.1);
+    color: #ff4500;
+    padding: 20px;
+    text-align: left;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #ff4500;
+}
+
+.ranking-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ranking-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.gold { color: #ffd700; font-weight: 800; font-size: 1.2rem; }
+.silver { color: #c0c0c0; font-weight: 800; }
+.bronze { color: #cd7f32; font-weight: 800; }
+
+.char-name { font-weight: 600; color: #fff; }
+.lvl { color: #aaa; font-weight: 400; }
+.kills { color: #ff4500; font-weight: 700; }
+
+.status-on {
+    color: #00ff00;
+    font-size: 0.7rem;
+    background: rgba(0, 255, 0, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.status-off {
+    color: #ff0000;
+    font-size: 0.7rem;
+    background: rgba(255, 0, 0, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+}
