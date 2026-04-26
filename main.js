@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     fetchNews();
+    startCountdown();
     
     // Navbar scroll effect
     window.addEventListener('scroll', () => {
@@ -44,4 +45,32 @@ async function fetchNews() {
     } catch (error) {
         console.error('Error cargando noticias:', error);
     }
+}
+
+function startCountdown() {
+    const targetDate = new Date('May 2, 2026 00:00:00').getTime();
+    
+    const update = () => {
+        const now = new Date().getTime();
+        const diff = targetDate - now;
+        
+        if (diff <= 0) {
+            document.querySelector('.countdown-title').innerHTML = '¡ESTAMOS ONLINE!';
+            document.getElementById('timer').style.display = 'none';
+            return;
+        }
+        
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        
+        document.getElementById('days').innerText = days.toString().padStart(2, '0');
+        document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+    };
+    
+    setInterval(update, 1000);
+    update();
 }
