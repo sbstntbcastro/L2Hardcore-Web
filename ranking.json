@@ -1,5 +1,12 @@
 ﻿[
     {
+        "pvpkills":  "1502",
+        "level":  "120",
+        "pkkills":  "1251",
+        "online":  "1",
+        "char_name":  "MasacresS"
+    },
+    {
         "pvpkills":  "1",
         "level":  "120",
         "pkkills":  "0",
@@ -12,13 +19,6 @@
         "pkkills":  "1",
         "online":  "0",
         "char_name":  "V8"
-    },
-    {
-        "pvpkills":  "0",
-        "level":  "120",
-        "pkkills":  "0",
-        "online":  "0",
-        "char_name":  "MasacresS"
     },
     {
         "pvpkills":  "0",
