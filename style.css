@@ -674,3 +674,43 @@ footer {
     border-radius: 4px;
     border: 1px solid rgba(255, 0, 0, 0.3);
 }
+
+/* Vote Section Styles */
+#vote {
+    padding: 60px 0;
+    background: #080808;
+    border-top: 1px solid rgba(255, 69, 0, 0.1);
+}
+
+.vote-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 69, 0, 0.2);
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.vote-card:hover {
+    background: rgba(255, 69, 0, 0.1);
+    border-color: #ff4500;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.2);
+}
+
+.vote-card img {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+}
+
+.vote-card span {
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
