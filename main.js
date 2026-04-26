@@ -1,6 +1,7 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     fetchNews();
     startCountdown();
+    fetchRanking();
     
     // Navbar scroll effect
     window.addEventListener('scroll', () => {
@@ -24,7 +25,6 @@ async function fetchNews() {
             
             let videoHtml = '';
             if (item.videoUrl) {
-                // Convertir link normal de youtube a link de embed
                 const videoId = item.videoUrl.split('v=')[1] || item.videoUrl.split('/').pop();
                 videoHtml = `
                     <div class="video-wrapper" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden;">
@@ -55,8 +55,10 @@ function startCountdown() {
         const diff = targetDate - now;
         
         if (diff <= 0) {
-            document.querySelector('.countdown-title').innerHTML = '¡ESTAMOS ONLINE!';
-            document.getElementById('timer').style.display = 'none';
+            const title = document.querySelector('.countdown-title');
+            if (title) title.innerHTML = '¡ESTAMOS ONLINE!';
+            const timer = document.getElementById('timer');
+            if (timer) timer.style.display = 'none';
             return;
         }
         
@@ -65,10 +67,15 @@ function startCountdown() {
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
         
-        document.getElementById('days').innerText = days.toString().padStart(2, '0');
-        document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
-        document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
-        document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+        const d = document.getElementById('days');
+        const h = document.getElementById('hours');
+        const m = document.getElementById('minutes');
+        const s = document.getElementById('seconds');
+
+        if (d) d.innerText = days.toString().padStart(2, '0');
+        if (h) h.innerText = hours.toString().padStart(2, '0');
+        if (m) m.innerText = minutes.toString().padStart(2, '0');
+        if (s) s.innerText = seconds.toString().padStart(2, '0');
     };
     
     setInterval(update, 1000);
@@ -81,6 +88,7 @@ async function fetchRanking() {
         const ranking = await response.json();
         const body = document.getElementById('ranking-body');
         
+        if (!body) return;
         body.innerHTML = '';
         
         ranking.forEach((player, index) => {
@@ -94,17 +102,17 @@ async function fetchRanking() {
             
             const status = player.online === '1' ? '<span class="status-on">ONLINE</span>' : '<span class="status-off">OFFLINE</span>';
             
-            row.innerHTML = 
-                <td class=""></td>
-                <td class="char-name"></td>
-                <td class="kills"></td>
-                <td class="kills"></td>
-                <td></td>
-            ;
+            row.innerHTML = `
+                <td class="${posClass}">${posIcon}</td>
+                <td class="char-name">${player.char_name}</td>
+                <td class="lvl">${player.level}</td>
+                <td class="kills">${player.pvpkills}</td>
+                <td class="kills">${player.pkkills}</td>
+                <td>${status}</td>
+            `;
             body.appendChild(row);
         });
     } catch (error) {
         console.error('Error cargando ranking:', error);
     }
 }
-
