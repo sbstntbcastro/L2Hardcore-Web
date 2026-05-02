@@ -7,6 +7,27 @@
         "char_name":  "ADMIN"
     },
     {
+        "pvpkills":  "5",
+        "level":  "63",
+        "pkkills":  "0",
+        "online":  "1",
+        "char_name":  "LaddyMage"
+    },
+    {
+        "pvpkills":  "3",
+        "level":  "67",
+        "pkkills":  "0",
+        "online":  "1",
+        "char_name":  "Marian"
+    },
+    {
+        "pvpkills":  "2",
+        "level":  "69",
+        "pkkills":  "0",
+        "online":  "1",
+        "char_name":  "chulltre"
+    },
+    {
         "pvpkills":  "1",
         "level":  "102",
         "pkkills":  "0",
@@ -33,5 +54,12 @@
         "pkkills":  "0",
         "online":  "0",
         "char_name":  "MMHVO"
+    },
+    {
+        "pvpkills":  "0",
+        "level":  "28",
+        "pkkills":  "0",
+        "online":  "1",
+        "char_name":  "Eaea"
     }
 ]
