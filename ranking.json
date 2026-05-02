@@ -7,27 +7,6 @@
         "char_name":  "ADMIN"
     },
     {
-        "pvpkills":  "5",
-        "level":  "63",
-        "pkkills":  "0",
-        "online":  "1",
-        "char_name":  "LaddyMage"
-    },
-    {
-        "pvpkills":  "3",
-        "level":  "67",
-        "pkkills":  "0",
-        "online":  "1",
-        "char_name":  "Marian"
-    },
-    {
-        "pvpkills":  "2",
-        "level":  "69",
-        "pkkills":  "0",
-        "online":  "1",
-        "char_name":  "chulltre"
-    },
-    {
         "pvpkills":  "1",
         "level":  "102",
         "pkkills":  "0",
@@ -50,6 +29,27 @@
     },
     {
         "pvpkills":  "0",
+        "level":  "69",
+        "pkkills":  "0",
+        "online":  "0",
+        "char_name":  "chulltre"
+    },
+    {
+        "pvpkills":  "0",
+        "level":  "67",
+        "pkkills":  "0",
+        "online":  "0",
+        "char_name":  "Marian"
+    },
+    {
+        "pvpkills":  "0",
+        "level":  "63",
+        "pkkills":  "0",
+        "online":  "0",
+        "char_name":  "LaddyMage"
+    },
+    {
+        "pvpkills":  "0",
         "level":  "49",
         "pkkills":  "0",
         "online":  "0",
@@ -57,9 +57,16 @@
     },
     {
         "pvpkills":  "0",
-        "level":  "28",
+        "level":  "33",
+        "pkkills":  "0",
+        "online":  "0",
+        "char_name":  "Eaea"
+    },
+    {
+        "pvpkills":  "0",
+        "level":  "1",
         "pkkills":  "0",
         "online":  "1",
-        "char_name":  "Eaea"
+        "char_name":  "Duro"
     }
 ]
