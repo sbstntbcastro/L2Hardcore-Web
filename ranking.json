@@ -2,30 +2,30 @@
     {
         "pvpkills":  "1502",
         "level":  "120",
-        "pkkills":  "1251",
+        "pkkills":  "1252",
         "online":  "1",
-        "char_name":  "MasacresS"
+        "char_name":  "ADMIN"
     },
     {
-        "pvpkills":  "0",
-        "level":  "120",
-        "pkkills":  "1",
+        "pvpkills":  "1",
+        "level":  "102",
+        "pkkills":  "0",
         "online":  "0",
-        "char_name":  "V8"
+        "char_name":  "Masacres"
     },
     {
         "pvpkills":  "0",
         "level":  "119",
         "pkkills":  "0",
         "online":  "0",
-        "char_name":  "Probeta"
+        "char_name":  "PLAGA"
     },
     {
         "pvpkills":  "0",
-        "level":  "85",
+        "level":  "102",
         "pkkills":  "0",
         "online":  "0",
-        "char_name":  "Charlottew"
+        "char_name":  "MRSATAN"
     },
     {
         "pvpkills":  "0",
@@ -33,40 +33,5 @@
         "pkkills":  "0",
         "online":  "0",
         "char_name":  "MMHVO"
-    },
-    {
-        "pvpkills":  "0",
-        "level":  "37",
-        "pkkills":  "0",
-        "online":  "0",
-        "char_name":  "Minimi"
-    },
-    {
-        "pvpkills":  "0",
-        "level":  "33",
-        "pkkills":  "0",
-        "online":  "0",
-        "char_name":  "PitoDuro"
-    },
-    {
-        "pvpkills":  "0",
-        "level":  "24",
-        "pkkills":  "0",
-        "online":  "0",
-        "char_name":  "Halisha"
-    },
-    {
-        "pvpkills":  "0",
-        "level":  "22",
-        "pkkills":  "0",
-        "online":  "0",
-        "char_name":  "asdasddd"
-    },
-    {
-        "pvpkills":  "0",
-        "level":  "6",
-        "pkkills":  "0",
-        "online":  "0",
-        "char_name":  "Edea"
     }
 ]
