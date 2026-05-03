@@ -3,14 +3,14 @@
         "pvpkills":  "1502",
         "level":  "120",
         "pkkills":  "1252",
-        "online":  "0",
+        "online":  "1",
         "char_name":  "ADMIN"
     },
     {
         "pvpkills":  "1",
         "level":  "102",
         "pkkills":  "0",
-        "online":  "0",
+        "online":  "1",
         "char_name":  "Masacres"
     },
     {
@@ -31,7 +31,7 @@
         "pvpkills":  "0",
         "level":  "78",
         "pkkills":  "0",
-        "online":  "0",
+        "online":  "1",
         "char_name":  "Eaea"
     },
     {
